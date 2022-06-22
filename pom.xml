@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.2.RELEASE</version>
+		<relativePath/>
+	</parent>
+	<groupId>com.dahuaboke</groupId>
+	<artifactId>boke</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>boke</name>
+	<description>dahua boke</description>
+	<packaging>pom</packaging>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<dahuaboke.version>1.0.0-SNAPSHOT</dahuaboke.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
+		</dependency>
+        <dependency>
+            <groupId>com.ctrip.framework.apollo</groupId>
+            <artifactId>apollo-client</artifactId>
+            <version>1.5.1</version>
+        </dependency>
+            <dependency>
+            <groupId>com.ctrip.framework.apollo</groupId>
+            <artifactId>apollo-client</artifactId>
+            <version>1.5.1</version>
+        </dependency>
+            <dependency>
+            <groupId>org.wso2.carbon.apimgt:</groupId>
+            <artifactId>org.wso2.carbon.apimgt.authenticator.oidc.ui</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+      </dependency>
+            <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-rs-extension-providers</artifactId>
+            <version>3.1.16</version>
+        </dependency>
+    </dependency>
+            <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.16</version>
+        </dependency>
+
+    </dependencies>
+
+	<!--这里不注释掉会导致子项目打包报错-->
+<!--	<build>-->
+<!--		<plugins>-->
+<!--			<plugin>-->
+<!--				<groupId>org.springframework.boot</groupId>-->
+<!--				<artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--				<version>1.5.9.RELEASE</version>-->
+<!--			</plugin>-->
+<!--		</plugins>-->
+<!--	</build>-->
+
+	<modules>
+    	<module>consumer</module>
+    	<module>customer</module>
+		<module>component</module>
+		<module>provider</module>
+	</modules>
+
+</project>
